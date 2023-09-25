@@ -3,7 +3,7 @@ version: 2
 models:
   - name: stg_payments
     columns:
-      - name: id
+      - name: customer_id
         tests:
           - unique
           - not_null
