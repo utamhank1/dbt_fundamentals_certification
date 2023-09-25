@@ -1,12 +1,15 @@
 version: 2
 sources:
   - name: jaffle_shop
+    description: a clone of a Postgres application database.
     database: DBT_TRAINING
     schema: DBT_TEST
     tables:
       - name: customers
+        description: the raw customers data.
         columns:
           - name: "id"
+            description: the primary key for the raw customers data.
             tests:
               - unique
               - not_null
@@ -16,8 +19,10 @@ sources:
           error_after: {count: 24, period: hour}
         
       - name: orders
+        description: the raw orders data.
         columns:
           - name: "id"
+            description: the primary key for the raw orders data.
             tests:
               - unique
               - not_null
