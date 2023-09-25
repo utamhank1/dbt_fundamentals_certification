@@ -6,6 +6,7 @@ sources:
     schema: DBT_TEST
     tables:
       - name: payments
+        description: raw table with payment information extracted from stripe.
         loaded_at_field: _batched_at_
         freshness: 
           warn_after: {count: 12, period: hour}

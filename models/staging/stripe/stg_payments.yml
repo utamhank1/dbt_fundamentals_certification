@@ -2,8 +2,12 @@ version: 2
 
 models:
   - name: stg_payments
+    description: the staging table of the payments information from stripe.
     columns:
       - name: customer_id
+        description: The primary key of the stg_payments table.
         tests:
           - unique
           - not_null
+      - name: "payment_method"
+        description: '{{ doc("payment_methods_doc") }}'
