@@ -6,7 +6,7 @@
         "order_date",
         "status"
 
-    from DBT_TRAINING.DBT_TEST.ORDERS
+    from {{ source('jaffle_shop', 'orders') }}
 
 )
 
