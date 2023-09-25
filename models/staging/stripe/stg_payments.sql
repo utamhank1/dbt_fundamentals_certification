@@ -6,7 +6,7 @@ with payments as (
         "payment_method",
         "amount"
 
-    from DBT_TRAINING.DBT_TEST.PAYMENTS
+    from {{ source("stripe", "payments") }}
 
 )
 
